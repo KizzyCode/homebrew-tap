@@ -7,6 +7,11 @@ class KcHttpfs < Formula
 
   head "https://github.com/KizzyCode/HTTPMount.git"
 
+  bottle do
+    root_url "https://github.com/KizzyCode/HTTPMount/releases/download/0.2.0/"
+    sha256 "ba2765db3ba4e212efaa32d8fe37da2cb120014c32f4fbf6a21dfa11733a8cd2" => :high_sierra
+  end
+
   depends_on "rust" => :build
   depends_on "kc-libselect" => :build
   depends_on "pkg-config" => :build
