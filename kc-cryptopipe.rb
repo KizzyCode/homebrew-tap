@@ -7,6 +7,11 @@ class KcCryptopipe < Formula
 
   head "https://github.com/KizzyCode/CryptoPipe.git"
 
+  bottle do
+    root_url "https://github.com/KizzyCode/CryptoPipe/releases/download/0.1.0/"
+    sha256 "f6b245ab1d7ac4e57dc6f92541e85d7003e454c5cdc28d241e110388569e546f" => :high_sierra
+  end
+
   depends_on "rust" => :build
   depends_on "libsodium" => :build
 
