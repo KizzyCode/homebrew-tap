@@ -1,16 +1,16 @@
 class KcCryptopipe < Formula
-  desc "This application allows you to mount a HTTP-resource like a file"
+  desc "Chunk-based authenticated en-/decryption for pipes using Argon2i as PBKDF and ChaCha20/Poly1305 as AE-cipher"
   homepage "https://github.com/KizzyCode/CryptoPipe"
 
-  url "https://github.com/KizzyCode/CryptoPipe/archive/0.1.0.tar.gz"
-  sha256 "7f03235691846e87e001019aaf5dd718320390110b40bdf0ef26b42abbf2585f"
+  url "https://github.com/KizzyCode/CryptoPipe/archive/0.2.0.tar.gz"
+  sha256 "47df4c121ea169f41c7e8469b4f10269edfaf6860e17c53ed639367f0c94abee"
 
   head "https://github.com/KizzyCode/CryptoPipe.git"
 
-  bottle do
-    root_url "https://github.com/KizzyCode/CryptoPipe/releases/download/0.1.0/"
-    sha256 "f6b245ab1d7ac4e57dc6f92541e85d7003e454c5cdc28d241e110388569e546f" => :high_sierra
-  end
+  #bottle do
+  #  root_url "https://github.com/KizzyCode/CryptoPipe/releases/download/0.1.0/"
+  #  sha256 "f6b245ab1d7ac4e57dc6f92541e85d7003e454c5cdc28d241e110388569e546f" => :high_sierra
+  #end
 
   depends_on "rust" => :build
   depends_on "libsodium" => :build
