@@ -3,7 +3,7 @@ class KcCryptopipe < Formula
   homepage "https://github.com/KizzyCode/CryptoPipe"
 
   url "https://github.com/KizzyCode/CryptoPipe/archive/0.2.0.tar.gz"
-  sha256 "47df4c121ea169f41c7e8469b4f10269edfaf6860e17c53ed639367f0c94abee"
+  sha256 "b1578d34b63bea2f6a6f000b41d5099006b6b8beb3b670bca1de9eecc33455f2"
 
   head "https://github.com/KizzyCode/CryptoPipe.git"
 
