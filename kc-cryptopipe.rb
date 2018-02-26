@@ -17,6 +17,7 @@ class KcCryptopipe < Formula
 
   def install
     # Run self-test and build executable
+    ohai "Running self tests; this may take some time..."
     system "cargo test --release"
     system "cargo build --release"
 
