@@ -18,6 +18,8 @@ class KcNoiseC < Formula
   end
   
   test do
-    assert system("which brssl") != true
+    assert system("stat /usr/local/lib/libnoisekeys.a") != true
+    assert system("stat /usr/local/lib/libnoiseprotobufs.a") != true
+    assert system("stat /usr/local/lib/libnoiseprotocol.a") != true
   end
 end
