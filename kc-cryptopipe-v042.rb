@@ -5,10 +5,10 @@ class KcCryptopipeV042 < Formula
   url "https://github.com/KizzyCode/CryptoPipe/archive/0.4.2.tar.gz"
   sha256 "d60387f51c80169eaf812191edda013a6215781a3e9718d5b5922f980aa9c044"
 
-  #bottle do
-  #  root_url "https://github.com/KizzyCode/CryptoPipe/releases/download/0.4.1/"
-  #  sha256 "16344d6bf4cb318b088aec9018631be31ea14e9a227e7d963cd15549640ca4a6" => :high_sierra
-  #end
+  bottle do
+    root_url "https://github.com/KizzyCode/CryptoPipe/releases/download/0.4.2/"
+    sha256 "7a2dd2e537507f077d7749da5e9fd001c9a10f40053ced1a2a767b5443145929" => :high_sierra
+  end
 
   depends_on "rust" => :build
   depends_on "libsodium" => :build
