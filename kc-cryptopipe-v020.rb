@@ -5,8 +5,6 @@ class KcCryptopipeV020 < Formula
   url "https://github.com/KizzyCode/CryptoPipe/archive/0.2.0.tar.gz"
   sha256 "b1578d34b63bea2f6a6f000b41d5099006b6b8beb3b670bca1de9eecc33455f2"
 
-  head "https://github.com/KizzyCode/CryptoPipe.git"
-
   bottle do
     root_url "https://github.com/KizzyCode/CryptoPipe/releases/download/0.2.0/"
     sha256 "16fca1d0acd5ef01a5dcbe3dbb9e0ff444e211c172799dbbaa0e0852c2b578aa" => :high_sierra
