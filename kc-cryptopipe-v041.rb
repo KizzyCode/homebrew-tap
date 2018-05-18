@@ -22,7 +22,7 @@ class KcCryptopipeV041 < Formula
     system "cargo build --release"
 
     # Install executable
-    bin.install "target/release/crypto_pipe" => "cryptopipe"
+    bin.install "target/release/crypto_pipe" => "cryptopipe-v0.4.1"
   end
 
   test do
