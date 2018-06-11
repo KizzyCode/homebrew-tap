@@ -6,6 +6,7 @@ class KcThttpd < Formula
 
   def install
     system "./configure", "--host=i686-apple-bsd", "--prefix=#{prefix}"
-    system "make install"
+    system "make"
+    bin.install "thttpd"
   end
 end
