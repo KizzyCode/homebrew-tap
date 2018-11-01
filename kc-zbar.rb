@@ -8,6 +8,11 @@ class KcZbar < Formula
 
   head "https://github.com/KizzyCode/homebrew-source-zbar.git"
 
+  bottle do
+    root_url "https://github.com/KizzyCode/homebrew-source-zbar/releases/download/0.20.1/"
+    sha256 "84b0862f09f9829c0d70ebe0e68e0cc88971ef6eecccb84939bca2e5f34872b3" => :mojave
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "docbook" => :build
