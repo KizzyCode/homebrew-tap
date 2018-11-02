@@ -11,6 +11,7 @@ class KcZbar < Formula
   bottle do
     root_url "https://github.com/KizzyCode/homebrew-source-zbar/releases/download/0.20.1/"
     sha256 "84b0862f09f9829c0d70ebe0e68e0cc88971ef6eecccb84939bca2e5f34872b3" => :mojave
+    sha256 "0df8290a2bb94ba1a8fbefdc1f9408b8761a269f1ea62a66462631c4d218b743" => :high_sierra
   end
 
   depends_on "autoconf" => :build
