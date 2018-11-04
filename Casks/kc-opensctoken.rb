@@ -11,6 +11,7 @@ cask "kc-opensctoken" do
   postflight do
     # Register the plugin
     # `sudo -u _securityagent pluginkit -a /Applications/OpenSCTokenApp.app/Contents/PlugIns/OpenSCToken.appex`
+    ohai "Registers OpenSC globally as securityagent"
     system_command "/usr/bin/sudo",
                    args: ["-u", "_securityagent", "pluginkit", "-a", "#{appdir}/OpenSCTokenApp.app/Contents/PlugIns/OpenSCToken.appex"],
                    sudo: true
