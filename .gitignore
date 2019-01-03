@@ -1,4 +1,6 @@
-Icon
+# Ignore the macOS folder-icon file
+Icon?
+
 .DS_Store
-./Bottles
-./Sources
+Bottles
+Sources
