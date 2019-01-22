@@ -9,6 +9,6 @@ cask "kc-safari-fido-u2f" do
   app "Safari FIDO U2F.app"
 
   postflight do
-    ohai "To register the plugin, open the app, restart Safari and enable \"Safari FIDO U2F Extension\" in the extensions settings"
+    system_command "/usr/bin/open", args: ["#{appdir}/#{app}"]
   end
 end
