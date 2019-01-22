@@ -9,6 +9,6 @@ cask "kc-safari-fido-u2f" do
   app "Safari FIDO U2F.app"
 
   postflight do
-    system_command "/usr/bin/open", args: ["#{appdir}/#{app}"]
+    system_command "/usr/bin/open", args: ["#{appdir}/Safari FIDO U2F.app"]
   end
 end
