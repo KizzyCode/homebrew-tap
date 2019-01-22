@@ -9,6 +9,7 @@ cask "kc-safari-fido-u2f" do
   app "Safari FIDO U2F.app"
 
   postflight do
+    ohai "Opening the app so that you can register the extension"
     system_command "/usr/bin/open", args: ["#{appdir}/Safari FIDO U2F.app"]
   end
 end
