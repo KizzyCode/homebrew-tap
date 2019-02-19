@@ -32,6 +32,7 @@ class KcBotan < Formula
   end
 
   test do
-    assert_equal "4F4DF6B8239B38056DACA0C7CDA2B2AA -", shell_output("echo Testolope | botan hash --algo=MD5")
+    assert_equal "854E3A2D0F90523515E7FA419B1652289E8A07FFC3DCBE51F29998C0D2CED781",
+      shell_output("printf Testolope | botan hash --algo=SHA-256 | dd bs=1 count=64")
   end
 end
