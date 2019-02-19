@@ -1,11 +1,11 @@
 class KcBotan < Formula
   desc "Cryptographic algorithms and formats library in C++"
   homepage "https://botan.randombit.net/"
-  url "https://botan.randombit.net/releases/Botan-2.1.0.tgz"
-  sha256 "460f2d7205aed113f898df4947b1f66ccf8d080eec7dac229ef0b754c9ad6294"
+  url "https://botan.randombit.net/releases/Botan-2.9.0.tgz"
+  sha256 "305564352334dd63ae63db039077d96ae52dfa57a3248871081719b6a9f2d119"
   head "https://github.com/randombit/botan.git"
 
-  needs :cxx11
+  conflicts_with "botan", :because => "botan is the same library"
 
   def install
     ENV.cxx11
@@ -16,15 +16,22 @@ class KcBotan < Formula
       --cpu=#{MacOS.preferred_arch}
       --cc=#{ENV.compiler}
       --os=darwin
-      --disable-modules=darwin_secrandom
     ]
 
     system "./configure.py", *args
+
     # A hack to force them use our CFLAGS. MACH_OPT is empty in the Makefile but used for each call to cc/ld.
-    system "make", "install", "MACH_OPT=#{ENV.cflags}"
+    system "make"
+
+    # Run self tests
+    ohai "Running self tests (this may take a while)..."
+    system "./botan-test"
+
+    # Install formula
+    system "make", "install"
   end
 
   test do
-    assert system("#{buildpath}/botan-test") != true
+    assert_equal "4F4DF6B8239B38056DACA0C7CDA2B2AA -", shell_output("echo Testolope | botan hash --algo=MD5")
   end
 end
