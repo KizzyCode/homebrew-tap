@@ -6,7 +6,8 @@ class KcRemotepid < Formula
   depends_on "rust" => :build
 
   def install
-    system "make install", "-C", "c_api/"
+    ENV["PREFIX"] = "#{prefix}"
+    system "make", "install", "-C", "c_api/"
   end
 
   test do
