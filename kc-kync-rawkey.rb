@@ -12,6 +12,6 @@ class KcKyncRawkey < Formula
   end
 
   test do
-    system "stat", "#{lib}/kync_rawkey/libkync_rawkey.dylib"
+    system "stat", "/usr/local/lib/kync_plugins/libkync_rawkey.dylib"
   end
 end
