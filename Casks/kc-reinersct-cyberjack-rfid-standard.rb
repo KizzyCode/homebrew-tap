@@ -13,4 +13,8 @@ cask "kc-reinersct-cyberjack-rfid-standard" do
   uninstall pkgutil: [
     "com.reiner-sct.mac.cyberjack"
   ]
+
+  caveats do
+    reboot
+  end
 end
