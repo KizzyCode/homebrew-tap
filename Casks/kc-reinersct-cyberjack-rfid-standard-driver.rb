@@ -1,4 +1,4 @@
-cask "kc-reinersct-cyberjack-rfid-standard" do
+cask "kc-reinersct-cyberjack-rfid-standard-driver" do
   version "3.99.5"
   sha256 "25bcd5d5ff197163bba94e72cddb4b74ad8a04df8e88df01404378f80c46f9b4"
   
@@ -13,7 +13,7 @@ cask "kc-reinersct-cyberjack-rfid-standard" do
   uninstall pkgutil: [
     "com.reiner-sct.mac.cyberjack"
   ]
-
+  
   caveats do
     reboot
   end
