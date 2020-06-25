@@ -1,6 +1,6 @@
 cask "kc-ausweisapp2" do
   version "1.20.1"
-  sha256 "76c60930e58cdf05df05c4eb0c485b1d0931a9a6dc647b4737ca1316bcf8e873"
+  sha256 "eca88e4569fb0da2753ba12db1f79d1e6cd5e7dc9a912d72e3949e8879370c6d"
 
   url "https://appl.governikus-asp.de/ausweisapp2/AusweisApp2-1.20.1.dmg"
   name "AusweisApp 2"
