@@ -3,8 +3,8 @@ class KcDiceware < Formula
   homepage "https://github.com/KizzyCode/diceware-swift"
   head "https://github.com/KizzyCode/diceware-swift.git"
 
-  url "https://github.com/KizzyCode/diceware-swift/archive/1.0.0.tar.gz"
-  sha256 "ca4e7de25535c7d3b736d214a92d5c02ceb0de67259c8f4c8f4a4cd63a2cd2c8"
+  url "https://github.com/KizzyCode/diceware-swift/archive/1.0.1.tar.gz"
+  sha256 "5acce2152220e6423fd254023905d3bfaf6bd539e22fe4feee1fc8db91dc6b57"
 
   depends_on :xcode => "11.0"
 
