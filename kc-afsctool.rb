@@ -10,6 +10,7 @@ class KcAfsctool < Formula
   depends_on "zlib" => :build
   depends_on "cmake" => :build
   depends_on "pkgconfig" => :build
+  depends_on "kc-lzvn" => :build
 
   def install
     system "cmake", "."
