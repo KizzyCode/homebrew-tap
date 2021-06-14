@@ -38,7 +38,7 @@ class KcZbar < Formula
     ]
 
     # Configure and build
-    system "./configure", *args
+    system "/bin/bash ./configure", *args
     system "make"
 
     # Install
