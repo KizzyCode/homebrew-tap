@@ -3,8 +3,8 @@ class KcResticEz < Formula
   homepage "https://github.com/KizzyCode/ResticEz-rust"
   head "https://github.com/KizzyCode/ResticEz-rust.git"
 
-  url "https://github.com/KizzyCode/ResticEz-rust/archive/refs/tags/0.1.0.tar.gz"
-  sha256 "e0a0ba18223f6608cb93d985cf89384e22c0e2b0c3f01747a8f5c7cea1020db7"
+  url "https://github.com/KizzyCode/ResticEz-rust/archive/refs/tags/0.1.1.tar.gz"
+  sha256 "c6ff726654706f6fdf70bda96b7c63c4efe836bde44c5a5dc2b687997b803d9b"
 
   depends_on "rust" => :build
 
