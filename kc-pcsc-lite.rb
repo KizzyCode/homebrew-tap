@@ -4,9 +4,11 @@ class KcPcscLite < Formula
   url "https://pcsclite.apdu.fr/files/pcsc-lite-1.9.5.tar.bz2"
   sha256 "9ee3f9b333537562177893559ad4f7b8d5c23ebe828eef53056c02db14049d08"
 
+  depends_on "libusb"
+
   def install
     system "./configure", "--prefix=#{prefix}", "--disable-libsystemd", "--enable-static", 
-      "--enable-ipcdir=/opt/homebrew/var/run/pcsc-ipc", "--enable-usbdropdir=/opt/homebrew/var/lib/pcsc-drivers"
+      "--enable-ipcdir=#{var}/run/pcsc-ipc", "--enable-usbdropdir=#{lib}/pcsc-drivers"
     system "make", "install"
   end
 
