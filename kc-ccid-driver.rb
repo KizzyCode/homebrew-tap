@@ -1,4 +1,4 @@
-class KcCcid < Formula
+class KcCcidDriver < Formula
     desc "This package provides the source code for a generic USB CCID driver and ICCD"
     homepage "https://ccid.apdu.fr"
     url "https://ccid.apdu.fr/files/ccid-1.5.0.tar.bz2"
@@ -9,9 +9,11 @@ class KcCcid < Formula
     depends_on "pkgconfig" => :build
   
     def install
-      system "./configure", "--prefix=#{prefix}", "--enable-static", 
-        "PCSC_CFLAGS=-I/opt/homebrew/include -I/opt/homebrew/include/PCSC -L/opt/homebrew/lib"
+      ENV.prepend_path "PKG_CONFIG_PATH", "#{Formula["kc-pcsc-lite"].opt_lib}/pkgconfig"
+    
+      system "./configure", "--prefix=#{prefix}", "--enable-static", "--enable-usbdropdir=#{buildpath}"
       system "make", "install"
+      (lib/"pcsc-drivers").install "ifd-ccid.bundle"
     end
   end
   
