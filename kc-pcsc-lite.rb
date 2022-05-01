@@ -8,8 +8,11 @@ class KcPcscLite < Formula
 
   def install
     system "./configure", "--prefix=#{prefix}", "--disable-libsystemd", "--enable-static", 
-      "--enable-ipcdir=#{var}/run/pcsc-ipc", "--enable-usbdropdir=#{lib}/pcsc-drivers"
+      "--enable-ipcdir=#{var}/run/pcsc-ipc", "--enable-usbdropdir=#{HOMEBREW_PREFIX}/share/pcsc-drivers"
     system "make", "install"
+
+    mkdir_p "#{share}/pcsc-drivers"
+    touch "#{share}/pcsc-drivers/.keep"
   end
 
   def caveats

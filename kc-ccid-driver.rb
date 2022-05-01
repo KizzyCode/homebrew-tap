@@ -11,9 +11,8 @@ class KcCcidDriver < Formula
     def install
       ENV.prepend_path "PKG_CONFIG_PATH", "#{Formula["kc-pcsc-lite"].opt_lib}/pkgconfig"
     
-      system "./configure", "--prefix=#{prefix}", "--enable-static", "--enable-usbdropdir=#{buildpath}"
+      system "./configure", "--prefix=#{prefix}", "--enable-static", "--enable-usbdropdir=#{share}/pcsc-drivers"
       system "make", "install"
-      (lib/"pcsc-drivers").install "ifd-ccid.bundle"
     end
   end
   
