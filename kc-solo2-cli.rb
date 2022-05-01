@@ -6,7 +6,7 @@ class KcSolo2Cli < Formula
   sha256 "b17b6e846089f61af2ae58784f05daf2f17de4a63e8a890f9f525880b7e590be"
 
   depends_on "kc-pcsc-lite"
-  depends_on "kc-ccid"
+  depends_on "kc-ccid-driver"
   depends_on "rust" => :build
 
   patch :DATA
