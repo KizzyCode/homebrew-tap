@@ -2,8 +2,8 @@ class KcSolo2Cli < Formula
   desc "Solo 2 library and CLI in Rust"
   homepage "https://github.com/solokeys/solo2-cli"
 
-  url "https://github.com/solokeys/solo2-cli/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "f797a53046f7fb66ffd9f76063c4b9abdd88299b89d18c28a451a4f62573a334"
+  url "https://github.com/solokeys/solo2-cli/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "ae9ef9dd174a8b8294941635a3a66dc9062fd4b595d5f1f6507b5a5a232d6932"
 
   depends_on "kc-pcsc-lite"
   depends_on "kc-ccid-driver"
