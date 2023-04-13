@@ -19,7 +19,7 @@ class KcAnsible < Formula
         <<~EOF
           setup: str = "ansible-update"
           name: str = "ansible"
-          packages: list[str] = ["ansible"]
+          packages: list[str] = ["ansible", "nc-dnsapi"]
         EOF
       )
     }
