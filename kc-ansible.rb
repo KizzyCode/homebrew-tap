@@ -1,8 +1,6 @@
 class KcAnsible < Formula
   desc "This package is designed to provide comfortable access to a venv-based ansible installation"
   homepage "https://github.com/KizzyCode/venv-wrapper-python"
-  head "https://github.com/KizzyCode/venv-wrapper-python.git"
-
   url "https://github.com/KizzyCode/venv-wrapper-python/archive/refs/tags/0.1.0.tar.gz"
   sha256 "44b2265a8d3404f09e222894cb2ebe8df476977353705e4070e706cf11f6e48f"
 
@@ -12,18 +10,11 @@ class KcAnsible < Formula
     caveats = "Due to sandboxing, you need to run `ansible-update` to initialize and update the venv"
   end
 
-  def install
-    # Modify config
-    File.open("src/config.py", 'w') { |file|
-      file.write(
-        <<~EOF
-          setup: str = "ansible-update"
-          name: str = "ansible"
-          packages: list[str] = ["ansible", "nc-dnsapi"]
-        EOF
-      )
-    }
+  stable do
+    patch :DATA
+  end
 
+  def install
     # Install basic files
     bin.install "src/venv-wrapper.py" => "venv-wrapper.py"
     bin.install "src/config.py" => "config.py"
@@ -63,3 +54,21 @@ class KcAnsible < Formula
     assert system("which converthex") != true
   end
 end
+
+__END__
+diff --git a/src/config.py b/src/config.py
+index 8e36278..1ac5463 100644
+--- a/src/config.py
++++ b/src/config.py
+@@ -1,8 +1,3 @@
+-# A pseudo-executable name which is not mapped to a venv-binary, but initializes/update the venv instead
+-setup: str = "FIXME"
+-
+-# The name of the virtual environment
+-name: str = "FIXME"
+-
+-# The dependencies to install during setup
+-packages: list[str] = ["FIXME"]
++setup: str = "ansible-update"
++name: str = "ansible"
++packages: list[str] = ["ansible"]
