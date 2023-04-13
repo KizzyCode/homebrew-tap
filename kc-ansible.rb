@@ -4,7 +4,7 @@ class KcAnsible < Formula
   head "https://github.com/KizzyCode/venv-wrapper-python.git"
 
   url "https://github.com/KizzyCode/venv-wrapper-python/archive/refs/tags/0.1.0.tar.gz"
-  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  sha256 "44b2265a8d3404f09e222894cb2ebe8df476977353705e4070e706cf11f6e48f"
 
   conflicts_with "ansible"
 
