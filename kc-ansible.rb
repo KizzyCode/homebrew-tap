@@ -1,8 +1,8 @@
 class KcAnsible < Formula
   desc "This package is designed to provide comfortable access to a venv-based ansible installation"
   homepage "https://github.com/KizzyCode/venv-wrapper-python"
-  url "https://github.com/KizzyCode/venv-wrapper-python/archive/refs/tags/0.1.0.tar.gz"
-  sha256 "44b2265a8d3404f09e222894cb2ebe8df476977353705e4070e706cf11f6e48f"
+  url "https://github.com/KizzyCode/venv-wrapper-python/archive/refs/tags/0.1.1.tar.gz"
+  sha256 "fde770ad7748fe754a936675acf9dd0dfb545f244d64848d9c27a1fd07276e8a"
 
   conflicts_with "ansible"
 
