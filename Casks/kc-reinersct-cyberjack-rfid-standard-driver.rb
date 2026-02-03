@@ -1,20 +1,20 @@
 cask "kc-reinersct-cyberjack-rfid-standard-driver" do
-  version "3.99.5"
+  version "3.99.5-SP16"
   name "REINER SCT CyberJack RFID Standard Driver"
-  homepage "https://www.reiner-sct.com/support/support-anfrage/?productGroup=77304735&product=77304820&q=driver&os=macOS#choice5"
+  homepage "https://help.reiner-sct.com/de/support/solutions/articles/101000480002"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://support.reiner-sct.de/downloads/MAC/pcsc-cyberjack_3.99.5final.SP15-x86_64-signed.pkg"
-    sha256 "721c0cf3f82d863acd5c070b58961dcd890a035dd339563a5959b5f124d75820"
-    pkg "pcsc-cyberjack_3.99.5final.SP15-x86_64-signed.pkg"
-    depends_on macos: ">= :high_sierra"
+    url "https://support.reiner-sct.de/downloads/MAC/pcsc-cyberjack_3.99.5final.SP16-arm64-signed.pkg"
+    sha256 "ce347734f78bbcc66fa8da24828a191f5f585adceb14cf5423aac7e12d9638fb"
+    pkg "pcsc-cyberjack_3.99.5final.SP16-arm64-signed.pkg"
+    depends_on macos: ">= :ventura"
   end
 
   if OS.mac? && Hardware::CPU.arm?
-    url "https://support.reiner-sct.de/downloads/MAC/pcsc-cyberjack_3.99.5final.SP15-arm64-signed.pkg"
-    sha256 "bea7c3ae2e146b9216b805e611507bfa614c0c768c1206a53c07b6e7c33c7836"
-    pkg "pcsc-cyberjack_3.99.5final.SP15-arm64-signed.pkg"
-    depends_on macos: ">= :big_sur"
+    url "https://support.reiner-sct.de/downloads/MAC/pcsc-cyberjack_3.99.5final.SP16-x86_64-signed.pkg"
+    sha256 "2aa15c5e647fa8841ffd9c7fff950dc642ce23656a498a2e83412cd9c1551a0a"
+    pkg "pcsc-cyberjack_3.99.5final.SP16-x86_64-signed.pkg"
+    depends_on macos: ">= :ventura"
   end
 
   uninstall pkgutil: [

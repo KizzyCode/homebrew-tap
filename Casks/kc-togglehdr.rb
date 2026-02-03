@@ -1,8 +1,8 @@
 cask "kc-togglehdr" do
-  version "2024-03-24"
-  sha256 "c83c42e9612b55ddd3e0db2859d99b85114d60fe30acc8a5cafb3a9d3e61d6aa"
+  version "2025-05-15"
+  sha256 "892d8acf36c9500b2319b025d2bbc797f0768f95f8c30708eae90bea2e3640de"
 
-  url "https://github.com/alin23/mac-utils/raw/08194b0319594af49d0725c152d5a750cc80604f/bin/ToggleHDR"
+  url "https://github.com/alin23/mac-utils/raw/30a67ba920c493168cf6a74b154a2e335da9a36f/bin/ToggleHDR"
   name "ToggleHDR"
   desc "Programmatically toggle HDR if the checkbox is available in Display Preferences"
   homepage "https://github.com/alin23/mac-utils"
