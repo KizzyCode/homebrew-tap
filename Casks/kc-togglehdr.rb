@@ -7,7 +7,7 @@ cask "kc-togglehdr" do
   desc "Programmatically toggle HDR if the checkbox is available in Display Preferences"
   homepage "https://github.com/alin23/mac-utils"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   binary "ToggleHDR", target: "togglehdr"
 end
